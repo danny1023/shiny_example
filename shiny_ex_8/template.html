@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gapminder example using html + shiny</title>
+	{{headContent()}}
+	{{bootstrapLib()}}
+	<!--必须添加以上两列-->
+
+
+	<!--<script src="shared/jquery.js" 
+     type="text/javascript"></script> 
+    <script src="shared/shiny.js" type="text/javascript"></script> 
+    <link rel="stylesheet" type="text/css" 
+     href="shared/shiny.css"/> 
+    <style type = "text/css"> 
+      body { 
+        background-color: #ecf1ef; 
+      } 
+ 
+      #navigation { 
+        position: absolute; 
+        width: 300px; 
+      } 
+ 
+      #centerdoc { 
+        max-width: 600px;
+        margin-left: 350px; 
+        border-left: 1px solid #c6ec8c; 
+        padding-left: 20px; 
+      } 
+    </style> -->
+</head>
+<body>
+	<h1>Minimal HTML UI</h1>
+	<div class = 'container-fluid'>
+		<div class="row">
+			<div class="col-sm-4">
+				<h3>Control panel</h3>
+				{{sliderInput(inputId = 'year',
+						label = 'Years included',
+						min = 1952,
+						max = 2007,
+						value = c(1952,2007),
+						sep = '',
+						step = customStep)}}
+
+				{{checkboxInput('linear',
+						label = 'Add trend line?',
+						value = FALSE)}}
+			</div>
+			<div class="col-sm-8">
+				{{plotOutput('trend')}}
+				<p>For more information about <strong>shiny</strong> look at the <a href="http://shiny.rstudio.com/articles/"> documentation.</a></p>
+				<hr>
+				<p>If you wish to write some code you may like to use the pre() funtion like this:</p>
+				<pre>checkboxInput('linear', label = 'Add trend line?', value = FALSE)</pre>
+			</div>
+		</div>
+	</div>
+</body>
+</html>>

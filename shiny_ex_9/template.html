@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gapminder example using html + shiny</title>
+	{{headContent()}}
+	{{bootstrapLib()}}
+	<!--必须添加以上两列-->
+</head>
+<body>
+	<h1>Minimal HTML UI</h1>
+	<div class = 'container-fluid'>
+		<div class="row">
+			<div class="col-sm-4">
+				<h3>Control panel</h3>
+				{{slider}}
+
+				{{checkbox}}
+			</div>
+			<div class="col-sm-8">
+				{{thePlot}}
+				<p>For more information about <strong>shiny</strong> look at the <a href="http://shiny.rstudio.com/articles/"> documentation.</a></p>
+				<hr>
+				<p>If you wish to write some code you may like to use the pre() funtion like this:</p>
+				<pre>checkboxInput('linear', label = 'Add trend line?', value = FALSE)</pre>
+			</div>
+		</div>
+	</div>
+</body>
+</html>>
