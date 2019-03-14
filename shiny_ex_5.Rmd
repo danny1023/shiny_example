@@ -1,0 +1,13 @@
+---
+title: "shiny_ex_6"
+author: "Dannie"
+date: "2019/3/13"
+output: html_document
+runtime: shiny
+---
+
+# Just test embedding applications in documents
+
+```{r, echo=FALSE}
+shinyAppDir('/Users/xiongdanni/Desktop/shiny_ex_3')
+```

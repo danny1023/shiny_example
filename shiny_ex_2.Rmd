@@ -1,0 +1,25 @@
+---
+title: "Shiny_ex_2"
+author: "Dannie"
+date: "2019/3/12"
+output: html_document
+runtime: shiny
+---
+
+# Example RMarkdown document
+This is an interactive document written in *markdown*. As you can see it is easy to include:
+
+1. Ordered lists
+2. *Italics*
+3. **Bold type**
+4. Links to [Documentation]('http://example.com/')
+
+## This is heading two
+Perhaps this introduces the visualisation below.
+
+```{r, echo=FALSE}
+sliderInput('sampleSize', label = 'Size of sample', min = 10, max = 100, value = 50, step = 1)
+renderPlot({
+  hist(runif(input$sampleSize))
+})
+```
